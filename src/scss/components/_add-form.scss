@@ -1,0 +1,40 @@
+.create-form-cancel, .create-form-add {
+    color: $main-red;
+    background: $dark-gray;
+    border: none;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px  $dark-gray;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.form-cancel {
+    margin-left: 0px;
+}
+
+#add-button {
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+    background: $dark-gray;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    color: $main-red;
+    font-size: 35px;
+}
+
+#add-button:hover {
+    box-shadow: 1px 1px 1px #000;
+}
+
+label {
+    color: $main-red;
+    display: block;
+    font-size: 25px;
+}
+
+.hidden {
+    display: none;
+}

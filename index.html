@@ -3,11 +3,43 @@
 <head>
     <title>
     </title>
-    <link rel='stylesheet' src='build/main.css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='build/main.css'>
 </head>
 <body>
-
-
+    <header class='header'>My Playlist</header>
+    <div id='container'>
+        <main id='main'>
+            <div id='songs'>Number of songs: </div>
+            <div id='num-songs'></div>
+            <div id='songs-list'></div>
+        </main>
+        <div id='create-form'>
+            <div class='create-form-add-song'></div>
+                <div class='create-form-title'>
+                    <input id='title-input'></input>
+                    <label class='create-form-label' for ='title-input'>Song title</label>
+                </div>
+            </div>
+            <div class='create-form-add-song'>
+                <div class='create-form-artist'></div>
+                    <input id='artist-input'>
+                    <label class='create-form-label' for 'artist-input'>Artist</label>
+                </div>
+            </div>
+            <div class='create-form-add-song'>
+                <div id='form-genre'></div>
+                    <input id='genre-input'>
+                    <label class='create-form-label' for 'genre-input'>Genre</label>
+                </div>
+            </div>
+            <div id='form-buttons' class='create-form-add-song'>
+                <button class='create-form-cancel'>Cancel</button>
+                <button class='create-form-add'>Add</button>
+            </div>
+        </div>
+        <button id='add-button'>+</button>
+    </div>
 <script src='src/js/main.js'></script>
 </body>
 </html>

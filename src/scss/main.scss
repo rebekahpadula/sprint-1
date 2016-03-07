@@ -1,1 +1,24 @@
 @import 'normalize';
+@import '_vars';
+@import 'components/_header';
+@import 'components/_add-form';
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Raleway';
+}
+
+body {
+    background: #292929;
+    position: relative;
+}
+
+#songs {
+    font-size: 30px;
+    color: $main-red;
+    margin-top: 30px;
+}
