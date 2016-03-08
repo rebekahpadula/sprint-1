@@ -426,7 +426,6 @@ label {
     right: 0;
     display: block;
     margin: 5px;
-    text-align: center;
     margin-top: 550px; }
 
   #create-form #title-input {
@@ -469,23 +468,5 @@ body {
 
 #container {
   position: relative; }
-
-@media screen and (min-width: 500px) {
-  #create-form.active {
-    bottom: 0;
-    opacity: 1;
-    position: fixed;
-    padding: 1em;
-    width: 100%;
-    height: auto; }
-
-  #title-input {
-    width: 50%; }
-
-  #genre-input {
-    width: 100%; }
-
-  #artist-input {
-    width: 50%; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -39,12 +39,6 @@
         return el;
     };
 
-
-    // number of songs
-    function songsLength (data) {
-        newSong.innerHTML = data.length;
-    }
-
     // pushing song to data array
     function pushSong (song) {
         data.push(song);
@@ -61,6 +55,11 @@
     // looping through data array with forEach
     function initialize () {
         data.forEach(render);
+    }
+
+        // number of songs
+    function songsLength (data) {
+        newSong.innerHTML = data.length;
     }
 
     // hiding/showing add form
