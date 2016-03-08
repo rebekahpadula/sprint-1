@@ -14,7 +14,7 @@
 
     var songsList = document.querySelector('#songs-list');
     var addButton = document.querySelector('#add-button');
-    var numSongs = document.querySelector('.num-songs');
+    var numSongs = document.querySelector('#num-songs');
     var cancel = document.querySelector('.create-form-cancel');
     var formAdd = document.querySelector('.create-form-add');
     var createForm = document.querySelector('#create-form');
@@ -55,11 +55,12 @@
     // looping through data array with forEach
     function initialize () {
         data.forEach(render);
+        songsLength(data);
     }
 
         // number of songs
     function songsLength (data) {
-        newSong.innerHTML = data.length;
+        numSongs.textContent = data.length;
     }
 
     // hiding/showing add form
@@ -85,6 +86,7 @@
         artistInput.value = '';
         genreInput.value = '';
         pushSong(inputs);
+        songsLength(data);
         addButton.classList.remove('hide-button');
     });
 

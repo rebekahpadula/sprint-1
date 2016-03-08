@@ -374,7 +374,7 @@ th {
 .create-form-cancel,
 .create-form-add,
 #add-button {
-  transition: box-shadow 200ms; }
+  transition: box-shadow 300ms; }
 
 .form-cancel {
   margin-left: 0px; }
@@ -419,22 +419,18 @@ label {
 
 @media screen and (min-width: 500px) {
   #create-form {
-    display: none; }
+    display: none;
+    text-align: center; }
 
   #create-form.active {
     position: fixed;
-    right: 0;
     display: block;
     margin: 5px;
     margin-top: 550px; }
 
-  #create-form #title-input {
-    max-width: 30%; }
-
-  #create-form #genre-input {
-    max-width: 30%; }
-
-  #create-form #artist-input {
+  #create-form #title-input,
+  #artist-input,
+  #genre-input {
     max-width: 30%; } }
 .newSong {
   text-align: left;
@@ -468,5 +464,10 @@ body {
 
 #container {
   position: relative; }
+
+#num-songs {
+  font-size: 30px;
+  color: white;
+  margin-left: 10px; }
 
 /*# sourceMappingURL=main.css.map */
