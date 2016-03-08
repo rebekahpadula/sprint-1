@@ -1,0 +1,20 @@
+.newSong {
+    text-align: left;
+    padding: 5px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    color: white;
+    line-height: 5px;
+}
+
+.newSong h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 500px) {
+    .newSong {
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,92 @@
+.create-form-cancel, .create-form-add {
+    color: $lime-green;
+    background: $dark-gray;
+    border: none;
+    border-radius: 5%;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.create-form-cancel,
+.create-form-add,
+#add-button {
+    transition: box-shadow 200ms;
+}
+
+.form-cancel {
+    margin-left: 0px;
+}
+
+.create-form-cancel:hover,
+.create-form-add:hover,
+#add-button:hover {
+    box-shadow: 1px 1px 1px #000; 
+}
+
+#add-button {
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+    background: $dark-gray;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    color: $lime-green;
+    font-size: 40px;
+}
+
+label {
+    color: $lime-green;
+    display: block;
+    font-size: 25px;
+}
+
+#create-form {
+    display: none;
+}
+
+#create-form.active {
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
+    background: #2c2c2c;
+}
+
+.hide-button {
+    display: none;
+}
+
+
+@media screen and (min-width: 500px) {
+    #create-form {
+    display: none;
+}
+
+    #create-form.active {
+        position: fixed;
+        right: 0;
+        display: block;
+        margin: 5px;
+        text-align: center;
+        // background: none;
+        margin-top: 550px;
+    }
+
+     #create-form #title-input {
+        max-width: 30%;
+    }
+
+    #create-form #genre-input {
+        max-width: 30%;
+    }
+
+    #create-form #artist-input {
+        max-width: 30%;
+    }
+}
+

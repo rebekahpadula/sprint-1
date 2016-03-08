@@ -1,24 +1,52 @@
 @import 'normalize';
 @import '_vars';
 @import 'components/_header';
-@import 'components/_add-form';
+@import 'components/_create-form';
+@import 'components/_added-songs';
 
 *, *:before, *:after {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
     font-family: 'Raleway';
 }
 
 body {
-    background: #292929;
+    background: #2c2c2c;
     position: relative;
 }
 
 #songs {
     font-size: 30px;
-    color: $main-red;
+    color: $lime-green;
     margin-top: 30px;
 }
+
+#container {
+    position: relative;
+}
+
+@media screen and (min-width: 500px) {
+    #create-form.active {
+        bottom: 0;
+        opacity: 1;
+        position: fixed;
+        padding: 1em;
+        width: 100%;
+        height: auto;
+    }
+
+    #title-input {
+        width: 50%;
+    }
+
+    #genre-input {
+        width: 100%;
+    }
+
+    #artist-input {
+        width: 50%;
+    }
+}
+
