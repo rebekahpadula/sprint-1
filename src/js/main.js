@@ -22,10 +22,6 @@
     var artistInput = document.querySelector('#artist-input');
     var genreInput = document.querySelector('#genre-input');
 
-    function renderSongs (song) {
-        songsList.innerHTML = '';
-    }
-
     // creating new song and making in into html
     function getsongEl (newSong) {
         var el = document.createElement('div');
@@ -42,7 +38,6 @@
     // pushing song to data array
     function pushSong (song) {
         data.push(song);
-        render(song);
     }
 
     // appending child to display. el comes from getsongEl function
@@ -72,22 +67,53 @@
     cancel.addEventListener('click', function () {
         createForm.classList.remove('active');
         addButton.classList.remove('hide-button');
-    });
-
-    // using user inputs to add to object that gets pushed into data array
-    formAdd.addEventListener('click', function () {
-        var inputs = {
-            title: titleInput.value,
-            artist: artistInput.value,
-            genre: genreInput.value
-        };
-        createForm.classList.remove('active');
         titleInput.value = '';
         artistInput.value = '';
         genreInput.value = '';
-        pushSong(inputs);
-        songsLength(data);
-        addButton.classList.remove('hide-button');
+    });
+
+    function makeInvalid (el, msg) {
+        el.parentElement.classList.add('is-invalid');
+        el.parentElement.setAttribute('data-msg', msg);
+    }
+
+    // using user inputs to add to object that gets pushed into data array
+    formAdd.addEventListener('click', function () {
+        var inputs;
+        // Begin validations
+        var willSubmit = true;
+
+        if (!titleInput.value) {
+            makeInvalid(titleInput, 'Song title is required');
+            willSubmit = false;
+        }
+
+        if (!artistInput.value) {
+            makeInvalid(artistInput, 'Artist name is required');
+            willSubmit = false;
+        }
+
+        if (!genreInput.value) {
+            makeInvalid(genreInput, 'Genre is required');
+        }
+
+        // End validations
+
+        if (willSubmit) {
+            inputs = {
+                title: titleInput.value,
+                artist: artistInput.value,
+                genre: genreInput.value
+            };
+            createForm.classList.remove('active');
+            titleInput.value = '';
+            artistInput.value = '';
+            genreInput.value = '';
+            pushSong(inputs);
+            songsLength(data);
+            addButton.classList.remove('hide-button');
+            render(inputs);
+        }
     });
 
     initialize();

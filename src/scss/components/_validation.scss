@@ -1,0 +1,5 @@
+.is-invalid:after {
+    content: attr(data-msg);
+    color: red;
+    display: block;
+}

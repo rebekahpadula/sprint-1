@@ -447,11 +447,16 @@ label {
 @media screen and (min-width: 500px) {
   .newSong {
     text-align: center; } }
+.is-invalid:after {
+  content: attr(data-msg);
+  color: red;
+  display: block; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
 html, body {
-  font-family: 'Raleway'; }
+  font-family: 'Raleway', sans-serif; }
 
 body {
   background: #2c2c2c;

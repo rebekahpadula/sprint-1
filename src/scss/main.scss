@@ -1,15 +1,16 @@
 @import 'normalize';
-@import '_vars';
 @import 'components/_header';
+@import '_vars';
 @import 'components/_create-form';
 @import 'components/_added-songs';
+@import 'components/validation';
 
 *, *:before, *:after {
     box-sizing: border-box;
 }
 
 html, body {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
