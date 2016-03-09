@@ -62,6 +62,9 @@ label {
     display: none;
 }
 
+#create-form-checkbox {
+    display: inline-block;
+}
 
 @media screen and (min-width: 500px) {
     #create-form {
@@ -71,15 +74,8 @@ label {
 
     #create-form.active {
         position: fixed;
-        // right: 0;
         display: block;
         margin: 5px;
-        margin-top: 550px;
-    }
-
-    #create-form #title-input,
-    #artist-input,
-    #genre-input {
-        max-width: 30%;
+        top: auto;
     }
 }

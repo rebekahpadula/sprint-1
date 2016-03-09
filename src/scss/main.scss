@@ -1,9 +1,10 @@
 @import 'normalize';
-@import 'components/_header';
-@import '_vars';
-@import 'components/_create-form';
-@import 'components/_added-songs';
+@import 'components/header';
+@import 'vars';
+@import 'components/create-form';
+@import 'components/added-songs';
 @import 'components/validation';
+@import 'components/songInfo';
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -18,20 +19,8 @@ body {
     position: relative;
 }
 
-#songs {
-    font-size: 30px;
-    color: $lime-green;
-    margin-top: 30px;
-}
-
 #container {
     position: relative;
-}
-
-#num-songs {
-    font-size: 30px;
-    color: white;
-    margin-left: 10px;
 }
 
 

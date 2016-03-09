@@ -417,6 +417,9 @@ label {
 .hide-button {
   display: none; }
 
+#create-form-checkbox {
+  display: inline-block; }
+
 @media screen and (min-width: 500px) {
   #create-form {
     display: none;
@@ -426,13 +429,8 @@ label {
     position: fixed;
     display: block;
     margin: 5px;
-    margin-top: 550px; }
-
-  #create-form #title-input,
-  #artist-input,
-  #genre-input {
-    max-width: 30%; } }
-.newSong {
+    top: auto; } }
+.song {
   text-align: left;
   padding: 5px;
   font-family: 'Raleway';
@@ -440,17 +438,31 @@ label {
   color: white;
   line-height: 5px; }
 
-.newSong h3 {
+.song h3 {
   font-size: 25px;
   font-weight: bold; }
 
 @media screen and (min-width: 500px) {
-  .newSong {
+  .song {
     text-align: center; } }
 .is-invalid:after {
   content: attr(data-msg);
   color: red;
   display: block; }
+
+.info {
+  margin-top: 30px;
+  margin-left: 30px;
+  text-align: center; }
+
+#num-songs {
+  font-size: 30px;
+  color: white;
+  margin-left: 20px; }
+
+#songs {
+  font-size: 30px;
+  color: #76ee00; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -462,17 +474,7 @@ body {
   background: #2c2c2c;
   position: relative; }
 
-#songs {
-  font-size: 30px;
-  color: #76ee00;
-  margin-top: 30px; }
-
 #container {
   position: relative; }
-
-#num-songs {
-  font-size: 30px;
-  color: white;
-  margin-left: 10px; }
 
 /*# sourceMappingURL=main.css.map */

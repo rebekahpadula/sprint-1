@@ -1,4 +1,5 @@
-.newSong {
+@import '../vars';
+.song {
     text-align: left;
     padding: 5px;
     font-family: 'Raleway';
@@ -7,14 +8,13 @@
     line-height: 5px;
 }
 
-.newSong h3 {
+.song h3 {
     font-size: 25px;
     font-weight: bold;
 }
 
 @media screen and (min-width: 500px) {
-    .newSong {
+    .song {
         text-align: center;
     }
 }
-

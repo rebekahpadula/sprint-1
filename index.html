@@ -10,8 +10,11 @@
     <header class="header">My Playlist</header>
     <div id="container">
         <main id="main">
-            <span id="songs">Number of songs: </span>
-            <span id="num-songs"></span>
+            <div class="info">
+                <span id="songs">Number of songs: </span>
+                <span id="num-songs"></span>
+                <div id="num-fav-songs"></div>
+            </div>
             <div id="songs-list"></div>
         </main>
         <div id="create-form">
@@ -28,9 +31,15 @@
                 </div>
             </div>
             <div class="create-form-section">
-                <div id="create-form-genre">
+                <div class="create-form-genre">
                     <label class="create-form-label" for="genre-input">Genre</label>
                     <input id="genre-input" required>
+                </div>
+            </div>
+            <div class='create-form-section'>
+                <div class='create-form-checkbox'>
+                    <label id='create-form-checkbox' for='checkbox'>Favorite</label>
+                    <input id='checkbox' type='checkbox'>
                 </div>
             </div>
             <div id="form-buttons" class="create-form-section">

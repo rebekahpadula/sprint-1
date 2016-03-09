@@ -21,13 +21,17 @@
     var titleInput = document.querySelector('#title-input');
     var artistInput = document.querySelector('#artist-input');
     var genreInput = document.querySelector('#genre-input');
-
+    var createFormTitle = document.querySelector('.create-form-title');
+    var createFormArtist = document.querySelector('.create-form-artist');
+    var createFormGenre = document.querySelector('.create-form-genre');
+    var favorite = document.querySelector('#checkbox');
+    var numFavSongs = document.querySelector('#num-fav-songs');
     // creating new song and making in into html
     function getsongEl (newSong) {
         var el = document.createElement('div');
-        el.classList.add('newSong');
+        el.classList.add('song');
         el.innerHTML =
-        '<div class="newSong">' +
+        '<div class="song">' +
             '<h3>' + newSong.title + '</h3>' +
             '<h4>' + newSong.artist + '</h4>' +
             '<h4>' + newSong.genre + '</h4>' +
@@ -43,8 +47,8 @@
     // appending child to display. el comes from getsongEl function
     // el becomes a real html element.
     function render (song) {
-       var el = getsongEl(song);
-       songsList.appendChild(el);
+        var el = getsongEl(song);
+        songsList.appendChild(el);
     }
 
     // looping through data array with forEach
@@ -58,6 +62,17 @@
         numSongs.textContent = data.length;
     }
 
+    function hideForm () {
+        createForm.classList.remove('active');
+        addButton.classList.remove('hide-button');
+        titleInput.value = '';
+        artistInput.value = '';
+        genreInput.value = '';
+        createFormTitle.classList.remove('is-invalid');
+        createFormArtist.classList.remove('is-invalid');
+        createFormGenre.classList.remove('is-invalid');
+    }
+
     // hiding/showing add form
     addButton.addEventListener('click', function () {
         createForm.classList.add('active');
@@ -65,11 +80,7 @@
     });
 
     cancel.addEventListener('click', function () {
-        createForm.classList.remove('active');
-        addButton.classList.remove('hide-button');
-        titleInput.value = '';
-        artistInput.value = '';
-        genreInput.value = '';
+        hideForm();
     });
 
     function makeInvalid (el, msg) {
@@ -95,6 +106,7 @@
 
         if (!genreInput.value) {
             makeInvalid(genreInput, 'Genre is required');
+            willSubmit = false;
         }
 
         // End validations
@@ -105,14 +117,10 @@
                 artist: artistInput.value,
                 genre: genreInput.value
             };
-            createForm.classList.remove('active');
-            titleInput.value = '';
-            artistInput.value = '';
-            genreInput.value = '';
             pushSong(inputs);
             songsLength(data);
-            addButton.classList.remove('hide-button');
             render(inputs);
+            hideForm();
         }
     });
 
